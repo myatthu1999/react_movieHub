@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+.dark-ov {
+  background-color: rgba(0, 0, 0, 0.3);
+  @apply w-full h-screen left-0 top-0 absolute z-10;
+}
+
+.box {
+  @apply absolute left-10 top-96 w-1/3 text-white z-40;
+}
+
+body {
+  background-color: #252525;
+}
+.card {
+  transition: 0.5s;
+}
+.play-ic {
+  @apply text-red-600 w-24 h-24 absolute z-20;
+  left: 25%;
+  bottom: 0;
+  display: none;
+}
+
+.card:hover .play-ic {
+  display: block;
+  bottom: 30%;
+}
+
+.active-cl {
+  @apply font-semibold text-red-600;
+}
+
+.none-cl {
+  @apply text-white;
+}
+
+.detail-container {
+  @apply w-1/2 mx-auto flex items-start absolute z-20 justify-center p-4;
+  left: 30%;
+  top: 40%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
